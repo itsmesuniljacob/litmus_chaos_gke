@@ -19,9 +19,9 @@
     }
 
     # Enable Workload Identity
-    workload_identity_config {
-      identity_namespace = "${var.project_id}.svc.id.goog"
-    }
+    # workload_identity_config {
+    #   identity_namespace = "${var.project_id}.svc.id.goog"
+    # }
 
     node_config {
       preemptible  = true
@@ -36,9 +36,9 @@
         "disable-legacy-endpoints" = "true"
       }
 
-      workload_metadata_config {
-        node_metadata = "GKE_METADATA_SERVER"
-      }
+      # workload_metadata_config {
+      #   node_metadata = "GKE_METADATA_SERVER"
+      # }
 
       labels = { # Update: Replace with desired labels
         "environment" = "test"
